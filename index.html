@@ -1,1 +1,112 @@
-Hello World
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vincent Lav</title>
+    <meta
+      name="description"
+      content="Vincent Lav, Developer and Designer from France"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header_title">Vincent Lav</h1>
+      <nav class="header_nav">
+        <ol>
+          <li :class="{ 'is-selected': $store.app.currentPath === '/' }">
+            <div class="header_nav_symbol">&#9654;</div>
+            <a class="header_nav_text" href="#accueil">Accueil</a>
+          </li>
+          <li :class="{ 'is-selected': $store.app.currentPath === '/info/' }">
+            <div class="header_nav_symbol">&#9654;</div>
+            <a class="header_nav_text" href="#info">Info</a>
+          </li>
+          <li :class="{ 'is-selected': $store.app.currentPath === '/projets/' }">
+            <div class="header_nav_symbol">&#9654;</div>
+            <a class="header_nav_text" href="#projets">Projets </a>
+          </li>
+          <li :class="{ 'is-selected': $store.app.currentPath === '/contact/' }">
+            <div class="header_nav_symbol">&#9654;</div>
+            <a class="header_nav_text" href="#contact">Contact</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="page" id="accueil" data-page="accueil">
+        <div>
+          <h2>Fullstack Developer Student</h2>
+          <p>
+            <span>23 ans.</span
+            ><span
+              >Le développement web est la création des idées en réalité.</span
+            ><span>Le design est un art qui repousse toujours ses limites.</span
+            ><span
+              >Ensemble c'est une combinaison qui offre des expériences
+              numériques uniques et novatrices.</span
+            >
+          </p>
+        </div>
+      </section>
+      <section class="page" id="info" data-page="info">
+        <div>
+          <h2>Développement</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Design</h2>
+          <ul>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Gestion</h2>
+          <ul>
+            <li>GitHub</li>
+            <li>Notion</li>
+          </ul>
+        </div>
+      </section>
+      <section class="page" id="projets" data-page="projets">
+        <div>
+          <div>
+            <h2>Projets Développement</h2>
+            <ul>
+              <li>
+                <h3>Le Paris</h3>
+                <p>2023 | School</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Projets Design</h2>
+            <ul>
+              <li>
+                <h3>Maquette Portfolio</h3>
+                <p>2023 | Personnel</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="page" id="contact" data-page="contact">
+        <div>
+          <a href="https://www.linkedin.com/in/vincent-lav/" target="_blank"
+            >LinkedIn ↘</a
+          >
+          <a href="https://github.com/vinsliu" target="_blank">GitHub ↘</a>
+        </div>
+      </section>
+    </main>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

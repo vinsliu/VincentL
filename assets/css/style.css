@@ -1,0 +1,152 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-user-select: inherit;
+  user-select: inherit;
+  -webkit-user-drag: inherit;
+  -webkit-tap-highlight-color: inherit;
+  backface-visibility: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+:root {
+  --c-bg: rgb(255, 255, 255);
+  --c-bg2: rgb(200, 200, 200);
+  --c-text: rgb(0, 0, 0);
+  --pad: max(20px, 4vmin);
+}
+
+/* Font Face */
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 200;
+  src: url("/assets/font/PPNeueMontreal-Thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 400;
+  src: url("/assets/font/PPNeueMontreal-Book.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 600;
+  src: url("/assets/font/PPNeueMontreal-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Neue Montreal Mono";
+  font-weight: 200;
+  src: url("/assets/font/PPNeueMontrealMono-Thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Neue Montreal Mono";
+  font-weight: 400;
+  src: url("/assets/font/PPNeueMontrealMono-Book.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Neue Montreal Mono";
+  font-weight: 600;
+  src: url("/assets/font/PPNeueMontrealMono-SemiBold.woff2") format("woff2");
+}
+
+body {
+  background-color: var(--c-bg);
+  font-family: "Neue Montreal Mono";
+  font-weight: 600;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  background-color: var(--c-bg2);
+  padding: 20px;
+}
+.header_title {
+  font-size: 38px;
+  font-weight: 400;
+}
+.header ol {
+  padding-top: 20px;
+}
+.header a {
+  padding: 5px 0px;
+  text-decoration: none;
+  display: block;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.header_nav_symbol {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
+  &.is-selected {
+    opacity: 1;
+  }
+}
+.header_nav_text {
+  position: relative;
+  transition-property: opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+  }
+  &.is-selected {
+    opacity: 0;
+  }
+}
+
+.content {
+  margin-left: 200px;
+  font-size: 14px;
+  padding: 0px 10px;
+}
+
+.page {
+  height: 100vh;
+}
