@@ -118,9 +118,6 @@ body {
   transition-property: opacity;
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
-  &.is-selected {
-    opacity: 1;
-  }
 }
 .header_nav_text {
   position: relative;
