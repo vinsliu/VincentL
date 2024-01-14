@@ -90,6 +90,7 @@ body {
   font-weight: 600;
   font-size: 14px;
   overflow: hidden;
+  transition: background-color 0.5s ease, color 0.3s ease;
 }
 
 /* Header */
@@ -99,6 +100,7 @@ body {
   width: 200px;
   position: fixed;
   padding: 20px;
+  transition: background-color 0.5s ease, color 0.3s ease;
 }
 .header_title {
   font-size: 38px;

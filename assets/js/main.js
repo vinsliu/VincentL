@@ -1,9 +1,4 @@
-/**
- * Utility function to calculate the current theme setting.
- * Look for a local storage value.
- * Fall back to system setting.
- * Fall back to light mode.
- */
+// Current theme
 function calculateSettingAsThemeString() {
   const localStorageTheme = localStorage.getItem("theme");
   const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -19,9 +14,7 @@ function calculateSettingAsThemeString() {
   return "light";
 }
 
-/**
- * Utility function to update the button symbol, aria-label, and text.
- */
+// Update button
 function updateButton({ btnEl, isActive }) {
   const symbolEl = btnEl.querySelector(".theme-symbol");
   const symbol = isActive ? "&#9724;" : "&#9723;";
@@ -32,9 +25,7 @@ function updateButton({ btnEl, isActive }) {
   symbolEl.innerHTML = symbol;
 }
 
-/**
- * Utility function to update the theme setting on the html tag
- */
+// Update theme
 function updateThemeOnHtmlEl({ theme }) {
   document.querySelector("html").setAttribute("data-theme", theme);
 }
@@ -43,20 +34,14 @@ function updateThemeOnHtmlEl({ theme }) {
  * On page load:
  */
 
-/**
- * 1. Grab what we need from the DOM and system settings on page load
- */
+// Get
 const lightThemeButton = document.querySelector("[data-theme-light]");
 const darkThemeButton = document.querySelector("[data-theme-dark]");
 
-/**
- * 2. Work out the current site settings
- */
+// Current theme Check
 let currentThemeSetting = calculateSettingAsThemeString();
 
-/**
- * 3. Update the theme setting and button symbol according to current settings
- */
+// Overall Update
 updateButton({
   btnEl: lightThemeButton,
   isActive: currentThemeSetting === "light",
@@ -67,9 +52,7 @@ updateButton({
 });
 updateThemeOnHtmlEl({ theme: currentThemeSetting });
 
-/**
- * 4. Add event listeners to toggle the theme for each button
- */
+// EventListener
 lightThemeButton.addEventListener("click", () => {
   const newTheme = "light";
   localStorage.setItem("theme", newTheme);
