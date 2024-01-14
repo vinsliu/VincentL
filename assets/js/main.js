@@ -1,4 +1,4 @@
-// Current theme
+// Theme Toggler
 function calculateSettingAsThemeString() {
   const localStorageTheme = localStorage.getItem("theme");
   const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -14,7 +14,6 @@ function calculateSettingAsThemeString() {
   return "light";
 }
 
-// Update button
 function updateButton({ btnEl, isActive }) {
   const symbolEl = btnEl.querySelector(".theme-symbol");
   const symbol = isActive ? "&#9724;" : "&#9723;";
@@ -25,23 +24,15 @@ function updateButton({ btnEl, isActive }) {
   symbolEl.innerHTML = symbol;
 }
 
-// Update theme
 function updateThemeOnHtmlEl({ theme }) {
   document.querySelector("html").setAttribute("data-theme", theme);
 }
 
-/**
- * On page load:
- */
-
-// Get
 const lightThemeButton = document.querySelector("[data-theme-light]");
 const darkThemeButton = document.querySelector("[data-theme-dark]");
 
-// Current theme Check
 let currentThemeSetting = calculateSettingAsThemeString();
 
-// Overall Update
 updateButton({
   btnEl: lightThemeButton,
   isActive: currentThemeSetting === "light",
@@ -52,7 +43,6 @@ updateButton({
 });
 updateThemeOnHtmlEl({ theme: currentThemeSetting });
 
-// EventListener
 lightThemeButton.addEventListener("click", () => {
   const newTheme = "light";
   localStorage.setItem("theme", newTheme);

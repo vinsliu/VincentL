@@ -96,6 +96,7 @@ body {
 /* Header */
 .header {
   background-color: var(--color-hbg);
+  color: var(--color-fg);
   height: 100%;
   width: 200px;
   position: fixed;
@@ -159,5 +160,8 @@ body {
 }
 
 .page {
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
