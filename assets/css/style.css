@@ -108,7 +108,7 @@ body {
   font-weight: 400;
 }
 .header ol {
-  padding-top: 20px;
+  padding: 20px 0;
 }
 .header a {
   padding: 5px 0px;
@@ -133,7 +133,6 @@ body {
   position: relative;
   transition-property: opacity;
   transition-duration: 0.4s;
-  transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
   &::before {
     content: "";
     display: block;
@@ -145,6 +144,12 @@ body {
   }
 }
 
+
+.theme {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+}
 .theme-btn {
   cursor: pointer;
   padding: 5px 0px;

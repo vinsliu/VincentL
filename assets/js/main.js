@@ -1,5 +1,8 @@
+// Nav Symbol
+
+
 // Theme Toggler
-function calculateSettingAsThemeString() {
+function calculateThemeString() {
   const localStorageTheme = localStorage.getItem("theme");
   const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -31,7 +34,7 @@ function updateThemeOnHtmlEl({ theme }) {
 const lightThemeButton = document.querySelector("[data-theme-light]");
 const darkThemeButton = document.querySelector("[data-theme-dark]");
 
-let currentThemeSetting = calculateSettingAsThemeString();
+let currentThemeSetting = calculateThemeString();
 
 updateButton({
   btnEl: lightThemeButton,
