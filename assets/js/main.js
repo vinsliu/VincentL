@@ -1,5 +1,18 @@
-// Nav Symbol
+// Nav Active
+// Add active class to the current button (highlight it)
+var navItems = document.getElementsByClassName("nav_item");
 
+for (var i = 0; i < navItems.length; i++) {
+  navItems[i].addEventListener("click", function () {
+    var current = document.getElementsByClassName("active");
+
+    if (current.length > 0) {
+      current[0].classList.remove("active");
+    }
+
+    this.classList.add("active");
+  });
+}
 
 // Theme Toggler
 function calculateThemeString() {

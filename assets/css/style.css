@@ -114,8 +114,13 @@ body {
   padding: 5px 0px;
   display: block;
   &:hover {
-    opacity: 0.5;
+    background-color: var(--color-fg);
+    color: var(--color-bg);
   }
+}
+.active {
+  background-color: var(--color-fg);
+  color: var(--color-bg);
 }
 .header_nav_symbol {
   position: absolute;
@@ -126,21 +131,11 @@ body {
   pointer-events: none;
   transition-property: opacity;
   transition-duration: 0.4s;
-  transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
 }
 .header_nav_text {
   position: relative;
   transition-property: opacity;
   transition-duration: 0.4s;
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: -5px;
-    top: -5px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-  }
 }
 
 
