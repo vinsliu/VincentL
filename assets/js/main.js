@@ -1,5 +1,4 @@
 // Nav Active
-// Add active class to the current button (highlight it)
 var navItems = document.getElementsByClassName("nav_item");
 
 for (var i = 0; i < navItems.length; i++) {
@@ -57,22 +56,40 @@ updateButton({
   btnEl: darkThemeButton,
   isActive: currentThemeSetting === "dark",
 });
-updateThemeOnHtmlEl({ theme: currentThemeSetting });
+updateThemeOnHtmlEl({
+  theme: currentThemeSetting,
+});
 
 lightThemeButton.addEventListener("click", () => {
   const newTheme = "light";
   localStorage.setItem("theme", newTheme);
-  updateButton({ btnEl: lightThemeButton, isActive: true });
-  updateButton({ btnEl: darkThemeButton, isActive: false });
-  updateThemeOnHtmlEl({ theme: newTheme });
+  updateButton({
+    btnEl: lightThemeButton,
+    isActive: true,
+  });
+  updateButton({
+    btnEl: darkThemeButton,
+    isActive: false,
+  });
+  updateThemeOnHtmlEl({
+    theme: newTheme,
+  });
   currentThemeSetting = newTheme;
 });
 
 darkThemeButton.addEventListener("click", () => {
   const newTheme = "dark";
   localStorage.setItem("theme", newTheme);
-  updateButton({ btnEl: lightThemeButton, isActive: false });
-  updateButton({ btnEl: darkThemeButton, isActive: true });
-  updateThemeOnHtmlEl({ theme: newTheme });
+  updateButton({
+    btnEl: lightThemeButton,
+    isActive: false,
+  });
+  updateButton({
+    btnEl: darkThemeButton,
+    isActive: true,
+  });
+  updateThemeOnHtmlEl({
+    theme: newTheme,
+  });
   currentThemeSetting = newTheme;
 });
