@@ -1,3 +1,16 @@
+// Pre-loader
+document.addEventListener("DOMContentLoaded", function () {
+  const preloader = document.querySelector(".preloader");
+
+  preloader.addEventListener("transitionend", function () {
+    preloader.style.display = "none";
+  });
+
+  setTimeout(function () {
+    preloader.classList.add("loaded");
+  }, 2000); 
+});
+
 // Nav Active
 var navItems = document.getElementsByClassName("nav_item");
 
