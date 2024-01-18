@@ -216,7 +216,9 @@ main {
 #info {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   & div {
     padding: 0 20px;
   }
