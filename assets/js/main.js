@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setTimeout(function () {
     preloader.classList.add("loaded");
-  }, 2000);
+  }, 1500);
 });
 
 // Nav Active
