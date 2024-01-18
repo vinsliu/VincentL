@@ -201,11 +201,49 @@ main {
 .page {
   min-height: 100dvh;
   padding: 20px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 }
 .page_title {
   font-size: 20px;
   padding: 20px 0px;
+}
+
+#accueil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & div {
+    padding: 0 20px;
+  }
+}
+
+#projets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#projets .projets_list {
+  display: flex;
+  align-self: center;
+  margin-top: auto;
+  & div {
+    padding: 0 20px;
+  }
+}
+
+#projets div:last-child {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+#contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
