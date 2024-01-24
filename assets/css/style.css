@@ -9,6 +9,7 @@
   backface-visibility: inherit;
 }
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -244,6 +245,9 @@ main {
 #projets div:last-child {
   margin-top: auto;
   align-self: flex-end;
+}
+#projets li {
+  margin-bottom: 10px;
 }
 
 #contact {
