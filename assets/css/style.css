@@ -123,16 +123,7 @@ body {
   background-color: var(--color-fg);
   color: var(--color-bg);
 }
-.header_nav_symbol {
-  position: absolute;
-  left: 0;
-  top: 2px;
-  font-size: 10px;
-  opacity: 0;
-  pointer-events: none;
-  transition-property: opacity;
-  transition-duration: 0.4s;
-}
+
 .header_nav_text {
   position: relative;
   transition-property: opacity;

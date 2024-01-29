@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Nav Active
-var navItems = document.getElementsByClassName("nav_item");
+const navItems = document.querySelectorAll(".nav_item");
 
-for (var i = 0; i < navItems.length; i++) {
+for (let i = 0; i < navItems.length; i++) {
   navItems[i].addEventListener("click", function () {
-    var current = document.getElementsByClassName("active");
+    let current = document.getElementsByClassName("active");
 
     if (current.length > 0) {
       current[0].classList.remove("active");
