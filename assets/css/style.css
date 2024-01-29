@@ -242,7 +242,7 @@ main {
     padding: 0 20px;
   }
 }
-#projets div:last-child {
+#projets #playgrounds {
   margin-top: auto;
   align-self: flex-end;
 }
